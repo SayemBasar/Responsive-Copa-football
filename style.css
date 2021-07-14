@@ -87,6 +87,9 @@ p{
 .hero-sec-image:hover .ball{
     transform: translate(-150px, -300px);
 }
+.mobile-view{
+    display: none;
+}
 
 /* ========================
     players section 
@@ -150,8 +153,7 @@ p{
     margin: 70px 150px;
 }
 .stories{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
     grid-column-gap: 15px;
 }
 .stories a{
@@ -187,10 +189,13 @@ p{
 }
 .videos{
     display: flex;
-    justify-content: space-between;
 }
 .video a{
     display: inline-block;
+}
+.responsive-iframe{
+    width: 500px;
+    height: 350px;
 }
 
 /* ========================
@@ -227,10 +232,92 @@ p{
 ================================== */
 
 @media only screen and (max-width:688px) {
-    .hero-section{
-        display: none;
+.hero-section{
+    width: 100%;
+    height: 650px;
+    flex-direction: column;
+}
+.hero-description{
+    margin: 50px 20px 0;
+    width: 100%;
+}
+.hero-description h1{
+    font-size: 35px;
+    line-height: 65px;
+}
+.hero-sec-image, .ball, .man, .hero-sec-image img{
+    display: none;
+}
+.mobile-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 20px;
+}
+.mobile-view img{
+    width: 100%;
+    height: auto;
+}    
+.players-section{
+     margin: 50px 15px;
+}
+.players{
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 27px;
+}
+.player img{
+    width: 100%;
+    height: auto;
+}   
+.highlights{
+    margin: 0 20px;
+}
+.highlight{
+    flex-direction: column;
+}
+.highlight-desc {
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.highlight-desc h1{
+    font-size: 35px;
+}
+.highlights-image {
+    margin-right: 20px;
+}
+.highlights-image img {
+    width: 100%;
+    height: auto;
+} 
+.top-stories{
+    margin: 0 20px;
+}
+.stories{
+    flex-direction: column;
+}
+.stories a{
+    margin: 0 20px 20px 0;
+}
+.story, .story img {
+    width: 100%;
+    height: auto;
+}
+.video-moment{
+    margin: 30px 15px;
+}
+.videos{
+    flex-direction: column;
+}
+.video {
+    margin-bottom: 20px;
+}
+
+.responsive-iframe {
+    width: 100%;
+}  
+.footer-image, .footer-image img {
+    width: 250px;
+    height: auto;
     }
-    .players, .stories{
-        grid-template-columns: repeat(1, 1fr);
-    }
+
 }
